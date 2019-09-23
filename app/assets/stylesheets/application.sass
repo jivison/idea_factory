@@ -1,0 +1,88 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+    * Don't unindent this please
+     */
+
+
+@import "reset.css"
+@import url('https://fonts.googleapis.com/css?family=Itim&display=swap')
+
+
+html
+    font-family: "Itim", sans-serif
+    font-kerning: none
+    background: url("grid.jpg")
+    background-size: cover
+    margin: 0
+    padding: 0
+
+body
+    min-height: 100vh
+    background: rgba(255, 255, 255, 0.8)
+
+nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 0
+    padding: 1em
+
+    .logo
+        font-size: 2.5em
+        color: rgb(97, 158, 61)
+
+    .nav-link
+        color: rgb(39, 65, 24)
+        font-size: 2em
+        text-decoration: none
+
+        &:hover
+            color: rgb(97, 158, 61)
+
+    .login
+        display: flex
+        align-items: center
+
+        .nav-link, .username
+            font-size: 1.5em
+
+        *
+            margin-left: 1em
+
+article
+    padding: 1em
+
+html
+    font-size: 16px
+
+h1, h2, h3, h4, h5
+    font-weight: 400
+    line-height: 1.15
+
+h1
+    margin-top: 0
+    font-size: 4.209em
+
+h2
+    font-size: 3.157em
+h3
+    font-size: 2.369em
+h4
+    font-size: 1.777em
+h5
+    font-size: 1.333em
+
+small, .text_small
+    font-size: 0.75em

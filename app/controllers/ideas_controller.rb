@@ -9,6 +9,8 @@ class IdeasController < ApplicationController
     end
 
     def show
+        @review = Review.new
+        @like = Like.find_by(user: current_user, idea: @idea)
     end
 
     def new

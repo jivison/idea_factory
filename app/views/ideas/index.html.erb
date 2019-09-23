@@ -1,9 +1,12 @@
 <article class="ideas-index">
 
-    <h1 class="heading">All Ideas</h1>
+    <div class="idea" style="padding: 0; margin: 0"><h1 class="heading">All Ideas</h1></div>
 
     <% @ideas.each do |idea| %>
-        <a href=<%= idea_path(idea) %>><p><%= idea.title %></p>
+        <div class="idea">
+            <h3 class="title"><a class="title" href=<%= idea_path(idea) %>><%= idea.title %></a></h3>
+            <p class="description"><%= idea.description.truncate(100) %></p>
+        </div>
     <% end %>
 
 </article>

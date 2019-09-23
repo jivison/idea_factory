@@ -3,7 +3,10 @@ Rails.application.routes.draw do
 
   root to: "ideas#index"
 
-  resources :ideas
+  resources :ideas do
+    resources :reviews, shallow: true, only: [:create, :destroy]
+    resources :likes, only: [:create, :destroy], shallow: true
+  end
 
   resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :create, :destroy]

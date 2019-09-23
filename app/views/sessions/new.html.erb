@@ -1,17 +1,19 @@
 <article class="sessions-new">
 
-    <%= form_with url: :sessions, local: true do |f| %>
+    <h1 class="heading">Sign In</h1>
 
-        <div>
+    <%= form_with url: :sessions, local: true, class: "form" do |f| %>
+
+        <div class="form-input">
             <%= f.label :email %>
             <%= f.text_field :email %>
         </div>
-        <div>
+        <div class="form-input">
             <%= f.label :password %>
             <%= f.password_field :password %>
         </div>
 
-    <%= f.submit value: "Sign In!" %>
+    <%= f.submit value: "Sign In!", class: "submit" %>
 
     <% end %>
 

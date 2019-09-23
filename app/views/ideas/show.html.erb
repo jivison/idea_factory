@@ -1,0 +1,17 @@
+<article class="ideas-show">
+
+    <h1 class="title heading"><%= @idea.title %></h1>
+
+    <p class="description"><%= @idea.description %></p>
+
+    <small class="user">Ideated by <%= @idea.user.name %></small>
+
+    <% if can?(:crud, @idea) %>      
+        <div class="action-buttons">
+            <%= link_to 'Edit', edit_idea_path(@idea) %>
+            <%= link_to 'Delete', idea_path(@idea), method: :delete, data: {confirm: "Are you sure you want to delete this idea?"} %>
+        </div>
+    <% end %>
+
+
+</article>

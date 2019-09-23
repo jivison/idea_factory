@@ -1,0 +1,9 @@
+<article class="ideas-index">
+
+    <h1 class="heading">All Ideas</h1>
+
+    <% @ideas.each do |idea| %>
+        <a href=<%= idea_path(idea) %>><p><%= idea.title %></p>
+    <% end %>
+
+</article>

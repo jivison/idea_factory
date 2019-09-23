@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Idea Factory</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+
+    <nav>
+      <h2>Idea Factory</h2>
+      <%= link_to 'All Ideas', ideas_path %>
+      <%= link_to 'New Idea', new_idea_path %>
+
+      <% if @current_user.present? %>
+        <p>Signed in as <%= @current_user.name %></p>
+        <%= link_to 'Sign Out', session_path(session), method: :delete %>
+      <% else %>
+        <%= link_to 'Sign In', new_session_path %>
+        <%= link_to 'Sign Up', new_user_path %>
+      <% end %>
+
+    </nav>
+
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
